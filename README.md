@@ -8,10 +8,9 @@ My Niri wayland dotfiles
 
 - Waybar : [https://github.com/Alexays/Waybar](https://github.com/Alexays/Waybar)
 
+- Firefox Color : [https://addons.mozilla.org/en-US/firefox/addon/firefox-color/](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/)
 
 # Screenshots
-
-
 
 
 
