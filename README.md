@@ -6,7 +6,7 @@ My Niri wayland dotfiles
 
 - Neovim PDE (Jaggernaut) : [https://github.com/gopi487krishna/Jaggernaut-pde](https://github.com/gopi487krishna/Jaggernaut-pde)
 
-- Wallpapers : [https://github.com/JaKooLit/Wallpaper-Bank](https://github.com/JaKooLit/Wallpaper-Bank)
+- Wallpapers : [https://github.com/JaKooLit/Wallpaper-Bank](https://github.com/JaKooLit/Wallpaper-Bank) (Fantasy-Landscape3.png)
 
 - Window Manager : [https://github.com/YaLTeR/niri](https://github.com/YaLTeR/niri)
 
