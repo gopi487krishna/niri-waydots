@@ -1,0 +1,218 @@
+@import "mocha.css";
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: otf-font-awesome;
+    font-size: 16px;
+}
+
+window#waybar {
+    background-color: rgba(0,0,0,0);
+    color: @blue-primary1;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: @blue-primary1;
+}
+*/
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+
+#workspaces button {
+    padding: 0 5px; 
+    border-radius: 5em / 5em;
+    border: 1px solid @yellow-accent1;
+    background-color: @blue-primary1;/*@surface0*/;
+    color: @yellow-accent2;
+    margin: 2px;
+    font-weight: bold;
+}
+
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#timer,
+#keyboard-state,
+#custom-vnc,
+#backlight {
+    padding: 0 10px;
+    color: @yellow-accent2;
+    background-color: @blue-primary1;/*@surface0*/; 
+    font-weight: bold;
+    border-top: 1px solid @yellow-accent1;
+    border-bottom: 1px solid @yellow-accent1;
+}
+
+#memory {
+   color: @yellow-accent2;
+}
+
+#battery {
+   color: @yellow-accent2;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+    background-color: transparent;
+    font-weight:bold;
+    border-radius: 5em / 5em;
+    padding: 0 10px;
+    color: @yellow-accent2;
+}
+
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+  /*border-top-right-radius: 5em 5em; 
+  border-bottom-right-radius: 5em 5em;*/
+  color: @yellow-accent2;   
+}
+
+
+@keyframes blink {
+    to {
+        background-color: @blue-primary1;
+        color: @yellow-accent2;
+    }
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+
+#network.disconnected {
+    background-color: red;
+}
+
+#network {
+    color: @yellow-accent2;
+}
+
+#pulseaudio {
+    border-top-left-radius: 5em 5em;
+    border-bottom-left-radius: 5em 5em;
+    border-left: 1px solid @yellow-accent1;
+    color: @yellow-accent2;
+}
+
+#timer {
+
+    border-top-right-radius: 5em 5em;
+    border-bottom-right-radius: 5em 5em;
+    border-top-left-radius: 5em 5em;
+    border-bottom-left-radius: 5em 5em;
+    border-right: 1px solid @yellow-accent1;
+    border-left: 1px solid @yellow-accent1;
+}
+
+#memory {
+    border-top-right-radius: 5em 5em;
+    border-bottom-right-radius: 5em 5em;
+    border-right: 1px solid @yellow-accent1;
+}
+
+#clock {
+    border-top-right-radius: 5em 5em;
+    border-bottom-right-radius: 5em 5em;
+    border-top-left-radius: 5em 5em;
+    border-bottom-left-radius: 5em 5em;
+    border-right: 1px solid @yellow-accent1;
+    border-left: 1px solid @yellow-accent1;
+}
+
+
+
+#pulseaudio.muted {
+    background-color: @blue-secondary1;
+    color: @yellow-accent1 ;
+}
+
+#temperature.critical {
+    background-color: red;
+}
+
+#temperature {
+   color: @green;
+}
+
+#keyboard-state {
+    padding: 0 0px;
+    min-width: 16px;
+    color: @mauve;
+}
+
+
+#custom-vnc.status {
+   color : @green; 
+}
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#timer.expiring {
+    color: #d4310d;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.critical:not(.charging) {
+    color: #ff0000;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.charging, #battery.plugged {
+    color: @mauve;
+}
