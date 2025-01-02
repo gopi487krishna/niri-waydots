@@ -1,0 +1,7 @@
+theme = ayu
+font-family = "MonaspiceNe Nerd Font"
+font-size = 13 
+window-decoration = false
+background = #000814
+foreground = #cdd6f4
+confirm-close-surface = false
