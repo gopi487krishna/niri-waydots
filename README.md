@@ -16,6 +16,7 @@ My Niri wayland dotfiles
 
 ![](screenshots/mainscreen.png)
 ![](screenshots/fastfetch.png)
+![](screenshots/btop.png)
 ![](screenshots/gtk.png)
 ![](screenshots/rofi.png)
 ![](screenshots/workflow.png)
