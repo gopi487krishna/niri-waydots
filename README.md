@@ -14,7 +14,13 @@ My Niri wayland dotfiles
 
 # Screenshots
 
-
+![](screenshots/mainscreen.png)
+![](screenshots/fastfetch.png)
+![](screenshots/gtk.png)
+![](screenshots/rofi.png)
+![](screenshots/workflow.png)
+![](screenshots/workflow2.png)
+![](screenshots/zellij.png)
 
 
 
